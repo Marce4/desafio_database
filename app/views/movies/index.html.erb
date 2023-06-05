@@ -1,0 +1,8 @@
+<H1>Quieres agregar una pelicula?</H1>
+<h2>Haz click <a href="/movies/new">AQUI</a> </h2>
+<% @movies.each do |movie| %>
+    <div class="mov" style="border:1px;">
+        <%= movie.name %></br>
+        <%= movie.director %></br>
+    </div>
+<% end %>

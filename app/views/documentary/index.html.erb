@@ -1,0 +1,8 @@
+<H1>Quieres agregar un documental?</H1>
+<h2>Haz click <a href="/documentary/new">AQUI</a> </h2>
+<% @documentaries.each do |documentary| %>
+    <div class="doc" style="border:1px;">
+        <%= documentary.name %></br>
+        <%= documentary.director %></br>
+    </div>
+<% end %>

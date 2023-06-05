@@ -1,0 +1,8 @@
+<H1>Quieres agregar una serie?</H1>
+<h2>Haz click <a href="/series/new">AQUI</a> </h2>
+<% @series.each do |serie| %>
+    <div class="mov" style="border:1px;">
+        <%= serie.name %></br>
+        <%= serie.director %></br>
+    </div>
+<% end %>

@@ -1,0 +1,21 @@
+<h1>PELICULAS</h1>
+<p>Agregar nuevo registro</p>
+
+<div class="container">
+<%= form_with model: @movies, method: :post do |form| %>
+
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+    
+    <div>
+        <%= form.label :director  %>
+        <%= form.text_field :director  %>
+    </div>
+
+    <div>
+        <%= form.submit "Guardar" %>
+    </div>
+<% end %>
+</div>

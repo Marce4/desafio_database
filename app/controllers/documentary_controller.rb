@@ -4,13 +4,17 @@ class DocumentaryController < ApplicationController
   end
 
   def new
-    @documentaries = Documentary.new
+    @documentary = Documentary.new
+  end
+
+  def documentaries_params
+    params.require(:documentaries).permit(:name, :director)
   end
 
   def create
-    @documentaries = Documentary.new(params.require(:documentary).permit(:name, :director))
+    @documentary = Documentary.new(documentaries_params)#(params.require(:documentaries).permit(:name, :director))
   
-    if @documentaries.save
+    if @documentary.save
       redirect_to '/pages/index'
     else
       render :new      

@@ -8,7 +8,7 @@ class SeriesController < ApplicationController
   end
   
   def series_params 
-    params.require(:serie).permit(:name, :director)
+    params.require(:series).permit(:name, :director)
   end
 
   def create

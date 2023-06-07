@@ -7,11 +7,10 @@ Rails.application.routes.draw do
   get 'movies/new'
   get 'pages/index', to: 'pages#index', as: 'pages'
   post 'series/index', to: 'series#create'
-  post 'documentary/new', to: 'documentaries#create'
+  post 'documentary/index', to: 'documentary#create'
 
   resources :movies
   resources :series
-  resources :documentaries
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
